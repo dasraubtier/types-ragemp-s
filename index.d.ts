@@ -18,7 +18,11 @@ type Array4d = [ number, number, number, number ];
 // Main MP type
 // -------------------------------------------------------------------------
 
+<<<<<<< HEAD
 interface Mp {
+=======
+type Mp = {
+>>>>>>> 20bd9fe6b033b48bd36e3b28e8993dd5ebc3f4f6
 	blips: BlipMpPool;
 	checkpoints: CheckpointMpPool;
 	colshapes: ColshapeMpPool;
@@ -32,8 +36,13 @@ interface Mp {
 	config: ConfigMp,
 	world: WorldMp;
 
+<<<<<<< HEAD
 	Event: {
 		new(eventName: RageEnums.EventKey | string, callback: (...args: any[]) => void): EventMp
+=======
+	Event: { 
+		new(eventName: RageEnums.EventKey | string, callback: (...args: any[]) => void): EventMp 
+>>>>>>> 20bd9fe6b033b48bd36e3b28e8993dd5ebc3f4f6
 	};
 	Vector3: Vector3Mp;
 
@@ -86,7 +95,11 @@ interface EntityMp {
 	position: Vector3Mp;
 	readonly id: number;
 	readonly type: RageEnums.EntityType;
+<<<<<<< HEAD
 
+=======
+	
+>>>>>>> 20bd9fe6b033b48bd36e3b28e8993dd5ebc3f4f6
 	getVariable(name: string): any | undefined;
 	destroy(): void;
 	dist(position: Vector3Mp): number;
@@ -274,11 +287,19 @@ interface VehicleMp extends EntityMp {
 
 interface WorldMp {
 	weather: RageEnums.Weather | string;
+<<<<<<< HEAD
 	time: {
 		hour: number,
 		minute: number,
 		second: number
 
+=======
+	time: { 
+		hour: number,
+		minute: number,
+		second: number
+		
+>>>>>>> 20bd9fe6b033b48bd36e3b28e8993dd5ebc3f4f6
 		set(hour: number, minute: number, second: number): void;
 	};
 	trafficLights: {

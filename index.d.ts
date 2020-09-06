@@ -161,6 +161,7 @@ interface PlayerMp extends EntityMp {
 
 	ban(reason: string): void;
 	call(eventName: string, args: any[]): void;
+	callProc(procName: string, args: any[]): any;
 	clearDecorations(): void;
 	disableVoiceTo(targetPlayer: PlayerMp): void;
 	enableVoiceTo(targetPlayer: PlayerMp): void;
@@ -406,6 +407,7 @@ interface EventMpPool {
 	add(events: ({ [name: string]: (...args: any[]) => void; })): void;
 	addCommand(commandName: string, callback: (player: PlayerMp, fullText: string, ...args: string[]) => void): void;
 	addCommand(commands: { [commandName: string]: (player: PlayerMp, fullText: string, ...args: string[]) => void; }): void;
+	addProc(eventProcName: string, callback: (...args: any[]) => any) : void;
 	call(eventName: string, ...args: any[]): void;
 	callLocal(eventName: string, args?: any[]): void;
 	getAllOf(eventName: string): EventMp[];

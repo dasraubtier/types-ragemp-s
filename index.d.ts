@@ -408,6 +408,7 @@ interface EventMpPool {
 	addCommand(commandName: string, callback: (player: PlayerMp, fullText: string, ...args: string[]) => void): void;
 	addCommand(commands: { [commandName: string]: (player: PlayerMp, fullText: string, ...args: string[]) => void; }): void;
 	addProc(eventProcName: string, callback: (...args: any[]) => any) : void;
+	addProc(procs: ({ [eventProcName: string]: (...args: any[]) => any })) : void;
 	call(eventName: string, ...args: any[]): void;
 	callLocal(eventName: string, args?: any[]): void;
 	getAllOf(eventName: string): EventMp[];
